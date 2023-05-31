@@ -6,7 +6,7 @@
     <button @click="changeIronman">Cambiar Ironman</button>
     <button @click="changeHulk">Cambiar Ironman</button>
 
-    <h3>Ironman: {{ ironmanIsAlive }}</h3>
+    <!-- <h3>Ironman: {{ ironmanIsAlive }}</h3> -->
     <h3>Hulk: {{ hulkIsAlive }}</h3>
     <button @click="changeStatus">Cambiar estatus</button>
 
@@ -23,7 +23,7 @@ export default {
     const ironman = ref({name: 'Tony', age: 50})
     const hulk = reactive({name: 'Bruce', age: 50})
 
-    const ironmanIsAlive = reactive(false)
+    //const ironmanIsAlive = reactive(false)
     const hulkIsAlive = ref(true)
     const changeStatus = () => {
       hulkIsAlive.value = !hulkIsAlive.value
@@ -32,7 +32,7 @@ export default {
     return {
       ironman,
       hulk,
-      ironmanIsAlive,
+      //ironmanIsAlive,
       hulkIsAlive,
       changeStatus,
       changeIronman: () => {
