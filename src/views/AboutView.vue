@@ -1,3 +1,11 @@
+<template>
+  <div class="about">
+    <h1>This is an about page</h1>
+    <h3>{{ title }}</h3>
+    <button @click="changeTitle">Cambiar película</button>
+  </div>
+</template>
+
 <script>
 import {
   ref,
@@ -20,7 +28,6 @@ export default {
     console.log('Setup se llamó')
 
     const title = ref('Sherk')
-
 
     onMounted(() => {
       console.log('onMounted')
@@ -59,7 +66,7 @@ export default {
       console.log('onServerPrefetch')
     })
 
-    return{
+    return {
       title,
       changeTitle: () => {
         title.value = 'Shrek 2'
@@ -68,11 +75,3 @@ export default {
   },
 };
 </script>
-
-  <template>
-    <div class="about">
-      <h1>This is an about page</h1>
-      <h3>{{ title }}</h3>
-      <button @click="changeTitle">Cambiar película</button>
-    </div>
-  </template>
